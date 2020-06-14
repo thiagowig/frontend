@@ -1,3 +1,12 @@
 <p>welcome {{ name }} works!</p>
 
 You can see your todos <a routerLink="/todos">here</a>
+
+<div class="container">
+    Click here to get a customized message
+    <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Click here</button>
+</div>
+
+<div *ngIf="welcomeMessage">
+{{welcomeMessage}}
+</div>
